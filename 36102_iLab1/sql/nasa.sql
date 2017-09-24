@@ -41,7 +41,7 @@ insert into missions (name, program_id, class, command_module, lunar_module, lau
     ("Mercury-Redstone 3", (select id from programs where name = "Mercury"), NULL,      "Freedom 7",      NULL,         "1961-05-05 14:34:13", "1961-05-05 14:49:35", NULL,                  NULL),
     ("Mercury-Redstone 4", (select id from programs where name = "Mercury"), NULL,      "Liberty Bell 7", NULL,         "1961-07-21 12:20:36", "1961-07-21 12:36:13", NULL,                  NULL),
     ("Mercury-Atlas 6",    (select id from programs where name = "Mercury"), NULL,      "Friendship 7",   NULL,         "1962-02-20 14:47:39", "1962-02-20 19:43:02", NULL,                  NULL),
-    ("Mercury-Atlas 7",    (select id from programs where name = "Mercury"), NULL,      "Aurora 7    ",   NULL,         "1962-05-24 12:45:16", "1962-05-24 17:41:21", NULL,                  NULL),
+    ("Mercury-Atlas 7",    (select id from programs where name = "Mercury"), NULL,      "Aurora 7",       NULL,         "1962-05-24 12:45:16", "1962-05-24 17:41:21", NULL,                  NULL),
     ("Mercury-Atlas 8",    (select id from programs where name = "Mercury"), NULL,      "Sigma 7"    ,    NULL,         "1962-10-03 12:15:12", "1962-10-03 21:28:22", NULL,                  NULL),
     ("Mercury-Atlas 9",    (select id from programs where name = "Mercury"), NULL,      "Faith 7"    ,    NULL,         "1963-05-15 13:04:13", "1963-05-16 23:24:02", NULL,                  NULL),
     ("Gemini 3",           (select id from programs where name = "Gemini"),  NULL,      "Molly Brown",    NULL,         "1965-03-23 14:24:00", "1965-03-23 19:16:31", NULL,                  NULL),
