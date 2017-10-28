@@ -40,3 +40,14 @@ group_B_values <- data %>% filter(group == 'B') %>% pull(value)
 # Run the Kolmogorov-Smirnov test
 ks.test(group_A_values, group_B_values)
 
+
+
+# One-sample KS test ------------------------------------------------------
+
+sample <- rnorm(10, mean = 10, sd = 2)
+ks.test(sample, "pnorm", mean = 9, sd = 3)
+
+sample <- rnorm(50, mean = 10, sd = 2)
+ks.test(sample, "pnorm", mean = 9, sd = 3)
+
+
