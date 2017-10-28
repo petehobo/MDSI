@@ -116,9 +116,9 @@ dev.off()
 
 # Try to fit a few distributions
 distributions <- list("Weibull"     = "weibull",
-                      "Exponential" = "exp",
+                      # "Exponential" = "exp",
                       "Log Normal"  = "lnorm",
-                      "Logistic"    = "logis",
+                      # "Logistic"    = "logis",
                       "Normal"      = "norm",
                       "Gamma"       = "gamma")
 
@@ -140,6 +140,9 @@ fitted_distributions <- lapply(distributions, function(distribution) {
     result
 })
 
+png(paste0(ARTIFACTS_DIRECTORY, "/fitdist.weibull", FILE_STUB ,".png"), width=2000, height=2000, res=300)
+plot(fitted_distributions[["Weibull"]])
+dev.off()
 
 # Remove NULLs - distributions that failed to fit any parameters
 fitted_distributions <- compact(fitted_distributions)
@@ -163,9 +166,4 @@ dev.off()
 
 gofstat(fitted_distributions, fitnames = names(fitted_distributions))
 
-ks_fit <- lapply(fitted_distributions, function(fitted_distribution) {
-    goodness_of_fit <- gofstat(fitted_distribution)
-    goodness_of_fit$kstest
-})
-ks_fit
-
+gofstat(fitted_distributions, fitnames = names(fitted_distributions))$kstest
